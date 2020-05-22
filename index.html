@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+  <div>
+    <form method="post">
+      <select id="dropdown" name="graphs" onchange="myFunction()">
+        <option value="bar">Bar</option>
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+        <option value="area">Area</option>
+        <option value="scatter">Scatter</option>
+      </select>
+  </div>
+  <div>
+    <p id="demo"></p>
+  </div>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script src="chart.js"></script>
+</body>
+
+</html>
