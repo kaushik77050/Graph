@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Chart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div>
-    <form method="post">
-      <select id="dropdown" name="graphs" onchange="myFunction()">
-        <option value="bar">Bar</option>
-        <option value="line">Line</option>
-        <option value="pie">Pie</option>
-        <option value="area">Area</option>
-        <option value="scatter">Scatter</option>
-      </select>
-  </div>
-  <div>
-    <p id="demo"></p>
-  </div>
-  <div>
-    <canvas id="myChart"></canvas>
-  </div>
+  <label for="grpahs">Choose a Graph:</label>
 
+<!-- <select name="graphs" id="graphs">
+  <option value="bar">Bar</option>
+  <option value="line">Line</option>
+  <option value="pie">Pie</option>
+  <option value="area">Area</option>
+  <option value="scatter">Scatter</option>
+</select> -->
+
+<form method="post">
+  <!-- <select id="dropdown" name="graphs" onchange="changeHiddenInput(this)"> -->
+  <select id="dropdown" name="graphs" onchange="myFunction()">
+    <option value="bar">Bar</option>
+    <option value="line">Line</option>
+    <option value="pie">Pie</option>
+    <option value="area">Area</option>
+    <option value="scatter">Scatter</option>
+  </select>
+
+  <input type="hidden" name="hiddenInput" id="hiddenInput" value="" />
+
+  <!-- <button onclick="changeHiddenInput (objDropDown)" >Try it</button> -->
+</form>
+<!-- <div id="result"> </div> -->
+  <div><p id="demo"></p></div>
+  <div id="chart-wrapper">
+    <canvas id="chart"></canvas>
+  </div>
   <script src="chart.js"></script>
 </body>
 
